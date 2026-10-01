@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Arabic Grammar Guide for Beginners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0F5257;
+            --primary-dark: #0B3C40;
+            --secondary: #0B6E4F;
+            --accent: #C19A6B;
+            --accent-light: #FBF4EB;
+            --bg: #F4F6F8;
+            --card-bg: #FFFFFF;
+            --text-main: #2B2D42;
+            --text-muted: #6C757D;
+            --border: #E2E8F0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 4rem 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        nav a:hover {
+            background: var(--accent-light);
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid var(--border);
+        }
+
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 0.6rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .ar-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.9rem;
+            color: var(--primary);
+            direction: rtl;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: #F8FAFC;
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--secondary);
+            padding: 1.8rem;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        .card h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .example-box {
+            background: var(--accent-light);
+            border: 1px solid rgba(193, 154, 107, 0.4);
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tag {
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background: #ffffff;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #F8FAFC;
+        }
+
+        /* Quiz Styles */
+        .quiz-option {
+            display: block;
+            width: 100%;
+            padding: 0.8rem 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid var(--border);
+            background: #F8FAFC;
+            border-radius: 6px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .quiz-option:hover {
+            background: var(--accent-light);
+            border-color: var(--accent);
+        }
+
+        .quiz-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .quiz-btn:hover {
+            background: var(--primary);
+        }
+
+        #quiz-result {
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .section { padding: 1.5rem; }
+            .example-box { flex-direction: column; text-align: center; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Master Arabic Grammar</h1>
+        <p>A Structured & Comprehensive Foundation for Non-Native Arabic Learners</p>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#parts-of-speech">1. Parts of Speech</a>
+            <a href="#demonstratives">2. Demonstratives</a>
+            <a href="#pronouns">3. Personal Pronouns</a>
+            <a href="#sentence-structure">4. Sentence Structure</a>
+            <a href="#prepositions">5. Prepositions</a>
+            <a href="#sun-moon">6. Sun & Moon Letters</a>
+            <a href="#quiz">7. Test Your Knowledge</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Section 1: Parts of Speech -->
+        <div class="section" id="parts-of-speech">
+            <h2>1. The 3 Parts of Speech <span class="ar-text">أَقْسَامُ الْكَلَامِ</span></h2>
+            <p>Every word in the Arabic language falls into one of three distinct categories:</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <h3><span>1. Noun (Ism)</span> <span class="ar-text">اِسْم</span></h3>
+                    <p>Includes names of people, places, objects, adjectives, adverbs, and pronouns. Nouns do not carry time/tense.</p>
+                    <div class="example-box">
+                        <div class="ar-text">مَدْرَسَة</div>
+                        <div><strong>Madrasah</strong><br><small>School</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3><span>2. Verb (Fi'l)</span> <span class="ar-text">فِعْل</span></h3>
+                    <p>Words indicating an action bound to a time frame (Past <span class="ar-text" style="font-size:1.1rem">مَاضٍ</span>, Present/Future <span class="ar-text" style="font-size:1.1rem">مُضَارِع</span>, or Imperative <span class="ar-text" style="font-size:1.1rem">أَمْر</span>).</p>
+                    <div class="example-box">
+                        <div class="ar-text">يَكْتُبُ</div>
+                        <div><strong>Yaktubu</strong><br><small>He writes / is writing</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3><span>3. Particle (Harf)</span> <span class="ar-text">حَرْف</span></h3>
+                    <p>Connecting words that carry no complete meaning on their own unless attached to nouns or verbs.</p>
+                    <div class="example-box">
+                        <div class="ar-text">إِلَى</div>
+                        <div><strong>Ilā</strong><br><small>To / Towards</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Demonstrative Pronouns -->
+        <div class="section" id="demonstratives">
+            <h2>2. Demonstrative Pronouns <span class="ar-text">أَسْمَاءُ الْإِشَارَةِ</span></h2>
+            <p>Words used to point at specific objects or people based on distance and gender:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Distance</th>
+                        <th>Gender</th>
+                        <th>Arabic</th>
+                        <th>Transliteration</th>
+                        <th>English Equivalent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Near</td>
+                        <td>Masculine</td>
+                        <td class="ar-text">هَذَا</td>
+                        <td>Hādhā</td>
+                        <td>This (Male/Inanimate M)</td>
+                    </tr>
+                    <tr>
+                        <td>Near</td>
+                        <td>Feminine</td>
+                        <td class="ar-text">هَذِهِ</td>
+                        <td>Hādhihi</td>
+                        <td>This (Female/Inanimate F)</td>
+                    </tr>
+                    <tr>
+                        <td>Far</td>
+                        <td>Masculine</td>
+                        <td class="ar-text">ذَلِكَ</td>
+                        <td>Dhālika</td>
+                        <td>That (Male/Inanimate M)</td>
+                    </tr>
+                    <tr>
+                        <td>Far</td>
+                        <td>Feminine</td>
+                        <td class="ar-text">تِلْكَ</td>
+                        <td>Tilka</td>
+                        <td>That (Female/Inanimate F)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 3: Personal Pronouns -->
+        <div class="section" id="pronouns">
+            <h2>3. Detached Personal Pronouns <span class="ar-text">الضَّمَائِرُ المُنْفَصِلَةُ</span></h2>
+            <p>Pronouns that stand independently in a sentence:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Person</th>
+                        <th>Arabic</th>
+                        <th>Transliteration</th>
+                        <th>English Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st Person (Singular)</td>
+                        <td class="ar-text">أَنَا</td>
+                        <td>Ana</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>1st Person (Plural)</td>
+                        <td class="ar-text">نَحْنُ</td>
+                        <td>Naḥnu</td>
+                        <td>We</td>
+                    </tr>
+                    <tr>
+                        <td>2nd Person (Male)</td>
+                        <td class="ar-text">أَنْتَ</td>
+                        <td>Anta</td>
+                        <td>You (Singular Male)</td>
+                    </tr>
+                    <tr>
+                        <td>2nd Person (Female)</td>
+                        <td class="ar-text">أَنْتِ</td>
+                        <td>Anti</td>
+                        <td>You (Singular Female)</td>
+                    </tr>
+                    <tr>
+                        <td>3rd Person (Male)</td>
+                        <td class="ar-text">هُوَ</td>
+                        <td>Huwa</td>
+                        <td>He / It</td>
+                    </tr>
+                    <tr>
+                        <td>3rd Person (Female)</td>
+                        <td class="ar-text">هِيَ</td>
+                        <td>Hiya</td>
+                        <td>She / It</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 4: Sentence Structure -->
+        <div class="section" id="sentence-structure">
+            <h2>4. Sentence Structure <span class="ar-text">أَنْوَاعُ الْجُمَلِ</span></h2>
+            <p>Arabic sentences are classified by the category of the opening word:</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3><span>Nominal Sentence</span> <span class="ar-text">جُمْلَة اسْمِيَّة</span></h3>
+                    <p>Starts with a <strong>Noun</strong>. Composed of a Subject (<span class="ar-text" style="font-size:1rem">مُبْتَدَأ</span>) and Predicate (<span class="ar-text" style="font-size:1rem">خَبَر</span>).</p>
+                    <div class="example-box">
+                        <div class="ar-text">الـشَّمْسُ طَالِعَةٌ</div>
+                        <div><strong>Ash-shamsu ṭāli'ah</strong><br><small>The sun is rising</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3><span>Verbal Sentence</span> <span class="ar-text">جُمْلَة فِعْلِيَّة</span></h3>
+                    <p>Starts with a <strong>Verb</strong>. Composed of Verb (<span class="ar-text" style="font-size:1rem">فِعْل</span>) and Doer/Subject (<span class="ar-text" style="font-size:1rem">فَاعِل</span>).</p>
+                    <div class="example-box">
+                        <div class="ar-text">نَامَ الطِّفْلُ</div>
+                        <div><strong>Nāma aṭ-ṭiflu</strong><br><small>The child slept</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Prepositions -->
+        <div class="section" id="prepositions">
+            <h2>5. Common Prepositions <span class="ar-text">حُرُوفُ الْجَرِّ</span></h2>
+            <p>Prepositions always precede a noun and cause the noun to enter the Genitive state (Majroor):</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Arabic</th>
+                        <th>Transliteration</th>
+                        <th>Meaning</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ar-text">فِي</td>
+                        <td>Fī</td>
+                        <td>In / Inside</td>
+                        <td><span class="ar-text" style="font-size:1.2rem">فِي الْبَيْتِ</span> (In the house)</td>
+                    </tr>
+                    <tr>
+                        <td class="ar-text">عَلَى</td>
+                        <td>'Alā</td>
+                        <td>On / Upon</td>
+                        <td><span class="ar-text" style="font-size:1.2rem">عَلَى الطَّاوِلَةِ</span> (On the table)</td>
+                    </tr>
+                    <tr>
+                        <td class="ar-text">مِنْ</td>
+                        <td>Min</td>
+                        <td>From</td>
+                        <td><span class="ar-text" style="font-size:1.2rem">مِنَ الْمَدِينَةِ</span> (From the city)</td>
+                    </tr>
+                    <tr>
+                        <td class="ar-text">إِلَى</td>
+                        <td>Ilā</td>
+                        <td>To / Towards</td>
+                        <td><span class="ar-text" style="font-size:1.2rem">إِلَى السُّوقِ</span> (To the market)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 6: Sun and Moon Letters -->
+        <div class="section" id="sun-moon">
+            <h2>6. Sun & Moon Letters <span class="ar-text">الحُرُوفُ الشَّمْسِيَّةُ وَالقَمَرِيَّةُ</span></h2>
+            <p>When adding the definite article <strong>AL (الـ)</strong> to a noun, pronunciation changes based on the first letter:</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3><span>Sun Letters</span> <span class="ar-text">الحُرُوف الشَّمْسِيَّة</span></h3>
+                    <p>The "L" sound in <strong>AL</strong> is assimilated into the letter. (14 Letters: ت, ث, د, ذ, ر, ز, س, ش, ص, ض, ط, ظ, ل, ن).</p>
+                    <div class="example-box">
+                        <div class="ar-text">الشَّمْسُ</div>
+                        <div><strong>Ash-Shams</strong><br><small>(L is silent)</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3><span>Moon Letters</span> <span class="ar-text">الحُرُوف القَمَرِيَّة</span></h3>
+                    <p>The "L" sound in <strong>AL</strong> is clearly pronounced. (14 Letters: أ, ب, ج, ح, خ, ع, غ, ف, ق, ك, م, هـ, و, ي).</p>
+                    <div class="example-box">
+                        <div class="ar-text">الْقَمَرُ</div>
+                        <div><strong>Al-Qamar</strong><br><small>(L is clearly voiced)</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 7: Interactive Quiz -->
+        <div class="section" id="quiz">
+            <h2>7. Knowledge Check <span class="ar-text">اِخْتَبِرْ نَفْسَكَ</span></h2>
+            <p>Test your understanding of basic Arabic grammar principles:</p>
+
+            <div id="quiz-container" style="margin-top: 1.5rem;">
+                <p><strong>Q1: What type of sentence is "<span class="ar-text" style="font-size:1.2rem;">ذَهَبَ زَيْدٌ</span>" (Zayd went)?</strong></p>
+                <button class="quiz-option" onclick="checkAnswer(this, false)">Nominal Sentence (Jumla Ismiyya)</button>
+                <button class="quiz-option" onclick="checkAnswer(this, true)">Verbal Sentence (Jumla Fi'liyya)</button>
+                
+                <div id="quiz-result"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Arabic Grammar Guide for Non-Native Speakers &copy; 2026</p>
+    </footer>
+
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const resultDiv = document.getElementById('quiz-result');
+            const options = document.querySelectorAll('.quiz-option');
+            
+            options.forEach(opt => opt.style.backgroundColor = '#F8FAFC');
+
+            if (isCorrect) {
+                button.style.backgroundColor = '#D1E7DD';
+                resultDiv.style.color = '#0F5132';
+                resultDiv.textContent = 'Correct! It starts with a verb (ذَهَبَ - Went), making it a Verbal Sentence.';
+            } else {
+                button.style.backgroundColor = '#F8D7DA';
+                resultDiv.style.color = '#842029';
+                resultDiv.textContent = 'Incorrect. Try again! Look closely at the first word.';
+            }
+        }
+    </script>
+</body>
+</html>
